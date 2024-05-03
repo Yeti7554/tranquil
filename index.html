@@ -70,9 +70,9 @@
        </div>
        <div class="toggles">
             <div class="modality">
-                <strong>Services/Treatment For</strong>
-                <ol>
-                    <li>Deptression</li>
+                <H6 onclick="toggleServices1()">▶ Services/Treatment For</H6>
+                <ol id="servicesList1">
+                    <li>Depression</li>
                     <li>Anxiety</li>
                     <li>Eating Disorders</li>
                     <li>Panic Disorders</li>
@@ -87,8 +87,8 @@
                 </ol>
             </div>
             <div class="modality">
-                <strong>Therapies Used / Modalities</strong>
-                <ol>
+                <h6  onclick="toggleServices2()">▶ Therapies Used / Modalities</h6>
+                <ol id="servicesList2" style="display:none;">
                     <li>Client Centred Therapy</li>
                     <li>CBT</li>
                     <li>Solution Focused Therapy</li>
@@ -100,8 +100,8 @@
                 </ol>
             </div>
             <div class="modality">
-                <strong>Languages Offered</strong>
-                <ol>
+                <h6 onclick="toggleServices3()">▶ Languages Offered</h6>
+                <ol id="servicesList3" style="display:none;">
                     <li>English</li>
                     <li>Hindi</li>
                     <li>Punjabi</li>
@@ -115,6 +115,7 @@
            </div>
        </div>
     </div>
+    <script src="script.js"></script>
     <footer>
         <div class="footer-content">
             <div>
