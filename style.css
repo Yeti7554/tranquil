@@ -1,5 +1,7 @@
 body {
-margin: 0;}
+margin: 0;
+width: 100%;
+}
 
 /* General Styles for Navigation */
 nav {
@@ -241,7 +243,7 @@ footer a.logo-content {
     justify-content: center;  /* This aligns children vertically in the center */
     font-family: 'Imprima', sans-serif;
     text-align: left; /* Ensures that the text inside each child div is centered */
-    width: 100%; /* Ensures the flex container takes full width */
+    width: 80%; /* Ensures the flex container takes full width */
     margin-bottom: 5vh;
     margin-left: 5vh;
     margin-right: 5vh;
@@ -321,7 +323,7 @@ form {
     flex-direction: column;
     align-items: center;
     margin-bottom: 8vh;
-    width: 100vw;
+    width: 98.3vw;
 }
 
 
