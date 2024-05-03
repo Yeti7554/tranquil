@@ -138,7 +138,9 @@ h4 {
 }
 
 .card {
-    margin-right: 7vw;
+    margin-right: 3.5vw;
+    margin-left: 3.5vw;
+
 }
 
 .card-image {
@@ -243,7 +245,7 @@ footer a.logo-content {
     justify-content: center;  /* This aligns children vertically in the center */
     font-family: 'Imprima', sans-serif;
     text-align: left; /* Ensures that the text inside each child div is centered */
-    width: 80%; /* Ensures the flex container takes full width */
+    width: 90vw; /* Ensures the flex container takes full width */
     margin-bottom: 5vh;
     margin-left: 5vh;
     margin-right: 5vh;
