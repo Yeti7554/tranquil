@@ -9,3 +9,5 @@ counselling.tranquilminds@gmail.com
 10033 80 Ave NW
 
 Edmonton, AB
+
+Canada
