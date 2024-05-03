@@ -5,5 +5,7 @@ This is the website source code for Tranquil Minds Counselling services in Edmon
 ### For more information, Contact
 
 counselling.tranquilminds@gmail.com
+
 10033 80 Ave NW
+
 Edmonton, AB
