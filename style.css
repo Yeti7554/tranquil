@@ -30,7 +30,7 @@ nav {
 }
 
 .nav-link:hover {
-    color: blue; /* Darker grey on hover for visual feedback */
+    color: #087289; /* Darker grey on hover for visual feedback */
 }
 
 .banner {
@@ -253,4 +253,30 @@ footer a.logo-content {
 .toggles .button-set{
     display: flex;
     justify-content: center;
+}
+
+.about-columns {
+    display: flex;
+}
+
+.about-columns p {
+    margin: 5vw;
+}
+
+.about-image {
+    height: 40vh; /* Set the height of the image to 50 pixels */
+    width: auto; /* Maintain the aspect ratio */
+    margin-left: 6vw;
+    margin-top: 5vw;
+}
+
+.about-overlay {
+    position: absolute; /* Positioning outside the normal flow */
+    color: black; /* Text color */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+    font-size: 40px;
+    font-family: 'Kalam', cursive;
+    left: 10px; /* Position from the left of the parent */
+    text-align: left;
 }
