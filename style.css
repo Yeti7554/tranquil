@@ -95,7 +95,7 @@ nav {
     text-align: left;
 }
 
-p {
+p, li {
     font-family: 'Imprima', sans-serif;
 }
 
@@ -279,4 +279,70 @@ footer a.logo-content {
     font-family: 'Kalam', cursive;
     left: 10px; /* Position from the left of the parent */
     text-align: left;
+}
+
+h2 {
+    color: black;
+    font-size: 40px;
+    font-family: 'Kalam', cursive;
+    text-align: center;
+}
+
+.medium-banner-container {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-medium {
+    width: 70vw;
+    height: auto;
+    margin-bottom: 10vh;
+}
+
+.fees-container {
+    padding: 5vw;
+}
+
+h6, label {
+    color: #087289;
+    font-size: 20px;
+    font-family: 'Kalam', cursive;
+    text-align: left;
+    margin: 0;
+}
+
+.fees-container .button-set{
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8vh;
+    width: 100vw;
+}
+
+
+label {
+    width: 10vw;
+}
+
+input, .text-area {
+    width: 60vw;
+    margin: 5px;
+    border-radius: 5px;
+    border-color:2px grey;
+}
+
+form div {
+    width: 70vw;
+    display: flex;
+    margin: 2.5px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
 }

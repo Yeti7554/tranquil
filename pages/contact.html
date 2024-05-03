@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquil Minds</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="../index.html" class="logo-content">Tranquil<br>Minds</a>
+        </div>
+        <div>
+            <a href="./about.html" class="nav-link">About</a>
+            <a href="../index.html#services" class="nav-link">Services</a>
+            <a href="./fees.html" class="nav-link">Fees</a>
+            <a href="#" class="nav-link">Booking</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+    </nav>
+    <h2>Contact</h2>
+    <div class="medium-banner-container">
+        <img src="../images/banner3.png" alt="" class="banner-medium">
+    </div>
+    <div>
+        <form action="../sendmail.php" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required class="text-area"></textarea>
+            </div>
+            <div class="submit">
+                <button type="submit" class="light-button">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="#" class="logo-content">Tranquil<br>Minds</a>
+            </div>
+            <div class="footer-contact">
+                <a href="#" class="white-font">counselling.tranquilminds@gmail.com</a>
+                <a href="#" class="white-font">10033 80 Ave NW</a> 
+                <a class="white-font">Edmonton, AB</a>
+            </div>
+        </div>
+        <div class="footer-button-section">
+            <button class="dark-button">
+                Request Appointment
+            </button>
+            <p class="white-font">I respectfully acknowledge that we are situated on Treaty 6 territory, traditional lands of First Nations and Métis people.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
