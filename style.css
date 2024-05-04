@@ -5,10 +5,14 @@ width: 100%;
 
 /* General Styles for Navigation */
 nav {
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Logo styles */
