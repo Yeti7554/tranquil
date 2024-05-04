@@ -160,13 +160,16 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%; /* Ensure it spans the full width of the footer for even spacing */
 }
 
 .footer-contact {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
 }
 
 .footer-button-section {
@@ -200,6 +203,9 @@ footer a.logo-content {
     text-decoration: none;
     color: white; /* Dark grey color for better readability */
     display: block; /* Ensures that the <a> tag behaves like a block element */
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+
 }
 
 .dark-button {
