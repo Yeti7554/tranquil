@@ -25,6 +25,54 @@ nav {
     display: block; /* Ensures that the <a> tag behaves like a block element */
 }
 
+/* General styles, outside media query */
+.hamburger {
+    display: none; /* Hide hamburger button on larger screens */
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px; /* Increased size for better visibility */
+    position: fixed; /* Fixed position to keep it on top */
+    top: 10px; /* Position near the top */
+    right: 10px; /* Position near the right edge */
+    z-index: 1001; /* Higher z-index than the nav-links */
+    color: black; /* Color for visibility */
+}
+
+.nav-links {
+    display: flex; /* Ensure links are inline on desktop */
+}
+
+/* Hide links and show hamburger menu on mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    .nav-links {
+        margin-top: 10vh;
+        display: none; /* Hide links initially */
+        flex-direction: column; /* Stack them vertically when shown */
+        position: fixed; /* Changed from absolute to fixed */
+        background-color: white; /* Ensure background is white */
+        width: 100%; /* Full width */
+        height: 100vh; /* Full height of the viewport */
+        top: 0; /* Position at the top */
+        left: 0;
+        z-index: 999;
+        align-items: center; /* Center links horizontally */
+        justify-content: center; /* Center links vertically */
+    }
+
+    .nav-link {
+        padding: 15px; /* Add padding for tap targets */
+        width: 100%; /* Make links full width */
+        text-align: center; /* Center align links */
+        border-bottom: 1px solid gray; /* Optional separator */
+        color: black; /* Ensure text color is visible */
+        display: block; /* Ensure links are block level */
+    }
+}
 
 /* Navigation link styles */
 .nav-link {
@@ -79,15 +127,35 @@ nav {
 }
 
 
+/* Existing styles for .banner-overlay */
 .banner-overlay {
-    position: absolute; /* Positioning outside the normal flow */
-    color: black; /* Text color */
-    padding: 5px 10px; /* Padding around the text */
-    border-radius: 5px; /* Rounded corners for aesthetic */
+    position: absolute;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 40px;
     font-family: 'Kalam', cursive;
-
 }
+
+/* New Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .banner-overlay {
+        font-size: 20px; /* Smaller font size for mobile devices */
+        padding: 3px 6px; /* Adjust padding to be proportional to the new font size */
+    }
+
+    .banner-overlay.top-left {
+        top: 0%; /* Positioning the overlay higher */
+        left: 5px; /* Maintain position from the left */
+    }
+
+    .banner-overlay.bottom-right {
+        bottom: 0%; /* Positioning the overlay lower */
+        right: 5px; /* Maintain position from the right */
+    }
+}
+
+
 
 .banner-overlay.top-left {
     margin-bottom: 30%;
@@ -244,9 +312,74 @@ footer a.logo-content {
     transition: background-color 0.3s;
 }
     
-.light-button:hover {
-    background-color: rgba(0, 0, 0, 0.4); /* Black background with 30% transparency on hover */
+
+/* Existing button styles */
+.light-button, .dark-button {
+    margin-top: 20px;
+    width: 25vw; /* Adjust width as per design requirement */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black; /* for light-button */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.dark-button {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4); /* initial color for dark button */
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .toggles { 
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        margin-left: 2vw !important;
+    }
+
+    .toggles .button-set, .footer-button-section,  .fees-container .button-set {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .light-button, .dark-button {
+        width: 50vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-decoration: none;
+    }
+
+    /* Directly targeting anchor tags inside .button-set for specific styling */
+    .toggles .button-set a, .toggles .button-set a:visited, .toggles .button-set a:hover, .toggles .button-set a:active {
+        text-decoration: none;  /* Ensures no text decoration */
+        color: inherit;  /* Inherits color from the button styles */
+        background-color: inherit;  /* Inherits background from the button styles */
+    }
+
+    /* Directly targeting anchor tags inside .button-set for specific styling */
+    .fees-container .button-set a, .fees-container .button-set a:visited, .fees-container .button-set a:hover, .fees-container .button-set a:active {
+        text-decoration: none;  /* Ensures no text decoration */
+        color: inherit;  /* Inherits color from the button styles */
+        background-color: inherit;  /* Inherits background from the button styles */
+    }
+
+    .light-button:hover, .dark-button:hover {
+        text-decoration: none;  /* Reinforce no underline on hover */
+        color: #087289;  /* Optional: change color on hover */
+    }
+}
+
+
 
 .toggles {
     display: flex;
@@ -271,6 +404,21 @@ footer a.logo-content {
 
 .about-columns {
     display: flex;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .about-columns {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Stack children vertically */
+    }
+    
+    .about-image {
+        max-width: 100%; /* Ensure the image does not overflow the screen width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add space between the image and the paragraph */
+    }
 }
 
 .about-columns p {
@@ -338,6 +486,30 @@ form {
     width: 98.3vw;
 }
 
+@media (max-width: 768px) {
+    /* Target the form's div elements which likely contain input and label pairs */
+    form > div {
+        display: flex;
+        flex-direction: column; /* Stack the children (label and input) vertically */
+        width: 100%; /* Use full width for each form element */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea { /* Ensures textarea is also targeted */
+        width: 100%; /* Make all inputs and textarea full width */
+        margin: 10px 0; /* Add some vertical spacing */
+        box-sizing: border-box; /* Include padding and borders in the width calculation */
+        padding: 8px; /* Standard padding for better text alignment */
+        border: 1px solid #ccc; /* Optional: adds a subtle border */
+    }
+
+    /* Adjust label styles if necessary */
+    label {
+        width: 100%; /* Full width to align with inputs */
+        margin-bottom: 5px; /* Space between the label and input */
+    }
+}
 
 label {
     width: 10vw;

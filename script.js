@@ -24,3 +24,19 @@ function toggleServices3() {
         servicesList.style.display = "none";
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function () {
+        if (navLinks.style.display === 'block') {
+            navLinks.style.display = 'none';
+            hamburger.textContent = '☰'; // Menu icon
+        } else {
+            navLinks.style.display = 'block';
+            hamburger.textContent = '×'; // Close icon
+        }
+    });
+});
