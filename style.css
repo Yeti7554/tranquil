@@ -26,7 +26,7 @@ nav {
 }
 
 .logo-png {
-    width: 250px;
+    width: 200px;
 }
 
 /* General styles, outside media query */
@@ -342,6 +342,10 @@ footer a.logo-content {
 
 /* Media Query for screens smaller than 768px */
 @media (max-width: 768px) {
+    .logo-png, .logo-black {
+        width: 30vw
+    }
+
     .toggles { 
         box-sizing: border-box;
         width: 100%;
