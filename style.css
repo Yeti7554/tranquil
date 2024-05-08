@@ -253,6 +253,10 @@ footer {
     width: 100%; /* Full width to center align easily */
 }
 
+.logo-black {
+    width: 150px;
+}
+
 footer a {
     font-family: 'Imprima', sans-serif;
     padding: 0;
