@@ -25,6 +25,10 @@ nav {
     display: block; /* Ensures that the <a> tag behaves like a block element */
 }
 
+.logo-png {
+    width: 250px;
+}
+
 /* General styles, outside media query */
 .hamburger {
     display: none; /* Hide hamburger button on larger screens */
@@ -536,4 +540,5 @@ form div {
 .toggles h6 {
     cursor: pointer;
     user-select: none;
+    font-size: 25px;
 }
