@@ -48,7 +48,7 @@ nav {
 }
 
 /* Hide links and show hamburger menu on mobile */
-@media (max-width: 768px) {
+@media (max-width: 1171px) {
     .hamburger {
         display: block; /* Show hamburger icon */
     }
@@ -102,27 +102,46 @@ nav {
 
 
 .main-banner {
-    background-image: url('./images/banner1.png'); /* Path to your background image */
-    background-size: cover; /* Cover the entire area of the div */
-    background-position: center; /* Center the background image */
-    text-align: center; /* Center all text horizontally */
-    padding: 20px; /* Padding around the content */
-    position: relative; /* Ensures stacking context for overlay */
-    width: 80%; /* Adjust the width to your preference */
-    height: 400px; /* Fixed height */
-    box-sizing: border-box; /* Include padding and border in the width and height */
-    display: flex; /* Using Flexbox to center content */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-}
+    background-image: url('./images/banner1.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity (last value) to make it darker or lighter */
+  }
+  
+  .main-banner > * {
+    position: relative; /* Ensures that the content is on top of the overlay */
+    z-index: 1;
+  }
 
 .main-banner strong,
 .main-banner p,
 .main-banner button {
-    margin-bottom: 10px; /* Adds space after each element */
     font-family: 'Imprima', sans-serif;
+}
 
+.main-banner p, .main-banner strong {
+    color: white;
+    font-size: 20px;
 }
 
 .main-banner p {
@@ -141,8 +160,8 @@ nav {
     font-family: 'Kalam', cursive;
 }
 
-/* New Media Query for screens smaller than 768px */
-@media (max-width: 768px) {
+/* New Media Query for screens smaller than 1000px */
+@media (max-width: 1171px) {
     .banner-overlay {
         font-size: 20px; /* Smaller font size for mobile devices */
         padding: 3px 6px; /* Adjust padding to be proportional to the new font size */
@@ -188,13 +207,14 @@ p, li {
 }
 
 h3 {
-    font-family: 'Indie Flower', cursive; /* Indie Flower font, with a fallback to cursive */
+    font-family: 'Imprima', sans-serif;
     text-align: center;
     margin-bottom: 5vh;
+    font-size: 40px;
 }
 
 h4 {
-    font-family: 'Indie Flower', cursive; /* Indie Flower font, with a fallback to cursive */
+    font-family: 'Imprima', sans-serif;
     text-align: center;
 }
 
@@ -226,7 +246,7 @@ h4 {
 
 footer {
     padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-bottom: 1vh;
     background: #087289;
     display: flex;
     flex-direction: column;
@@ -263,7 +283,12 @@ footer a {
     margin: 0;
     color: white; /* Ensure links are white in the footer */
     text-decoration: none;
-    font-size: 13px;
+    font-size: 17.5px;
+}
+
+.footer-button-section p {
+    margin-top: 2.5vh;
+    font-size: 14px;
 }
 
 footer h5 {
@@ -340,8 +365,8 @@ footer a.logo-content {
     background-color: rgba(0, 0, 0, 0.4); /* initial color for dark button */
 }
 
-/* Media Query for screens smaller than 768px */
-@media (max-width: 768px) {
+/* Media Query for screens smaller than 1000px */
+@media (max-width: 1171px) {
     .logo-png, .logo-black {
         width: 30vw
     }
@@ -418,8 +443,8 @@ footer a.logo-content {
     display: flex;
 }
 
-/* Media Query for screens smaller than 768px */
-@media (max-width: 768px) {
+/* Media Query for screens smaller than 1000px */
+@media (max-width: 1171px) {
     .about-columns {
         flex-direction: column;
         justify-content: center;
@@ -477,6 +502,11 @@ h2 {
     padding: 5vw;
 }
 
+iframe {
+    width: 70vw;
+    margin-bottom: 10vh;
+}
+
 h6, label {
     color: #087289;
     font-size: 20px;
@@ -498,7 +528,7 @@ form {
     width: 98.3vw;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1171px) {
     /* Target the form's div elements which likely contain input and label pairs */
     form > div {
         display: flex;
