@@ -437,7 +437,7 @@ form div {
 }
 
 /* Media Query for screens smaller than 1171px */
-@media (max-width: 1171px) {
+@media (max-width: 1000px) {
     /* Increase font size in the main banner for better readability on mobile */
     .main-banner {
         height: 30vh;
