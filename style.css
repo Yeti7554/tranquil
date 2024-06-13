@@ -169,6 +169,14 @@ h4 {
 
 .card h4 {
     font-weight: bold;
+    color: white;
+    background-color: rgba(8, 114, 137, 0.9); /* Adjusted to 50% opacity */
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
+    border-radius: 10px;
+    width: 18vw;
 }
 
 .specialties {
@@ -184,13 +192,18 @@ h4 {
     flex-wrap: wrap;
     justify-content: center;
     width: 75vw;
+    gap: 5vw; /* Adds space between cards */
 }
 
 .card {
-    margin-right: 5vw;
-    margin-left: 5vw;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 calc(33.33% - 10vw); /* Adjusts the card width */
+    max-width: 100%; /* Ensures the card does not exceed the container width */
+    margin: 10px; /* Adds some margin for better spacing */
 }
+
 
 .card-image {
     height: 30vh; /* Set the height of the image to 50 pixels */
@@ -583,6 +596,36 @@ form div {
         display: flex;
         flex-direction: column;
     }
+
+    .specialties {
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+
+    .card-holder {
+        width: 90vw; /* Adjusts the container width on mobile */
+        gap: 3vw; /* Reduces gap between cards on mobile */
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 100%; /* Makes each card take full width on mobile */
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center; /* Centers the text inside the cards */
+    }
+
+    .card img {
+        margin: 0 auto; /* Centers the images inside the cards */
+    }
+
+    .card h4 {
+        font-weight: bold;
+        background-color: rgba(8, 114, 137, 0.9);; /* Adjusted to 50% opacity */
+        width: 45vw;
+    }
 }
 
 embed {
@@ -604,8 +647,6 @@ embed {
     padding: 20px;
     margin: 10px;
     flex: 1;
-    min-width: 200px;
-    max-width: 300px;
     color: black; /* Set text color to black */
 }
 
@@ -656,18 +697,8 @@ h3, p {
     color: black; /* Ensure all text is black for readability */
 }
 
-@media (max-width: 1000px) {
-    .steps-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .step {
-        max-width: 90%; /* Adjust width to fit two cards in a row */
-    }
-}
+
+
 
 .modality-container {
     display: flex;
@@ -683,5 +714,19 @@ h3, p {
     }
     .modality {
         max-width: 90%;
+    }
+
+    .steps-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        width: 90vw;
+    }
+
+    .step-title {
+        font-size: 35px;
     }
 }
