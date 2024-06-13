@@ -25,6 +25,15 @@ function toggleServices3() {
     }
 }
 
+function toggleServices4() {
+    var servicesList = document.getElementById("servicesList4");
+    if (servicesList.style.display === "none") {
+        servicesList.style.display = "block";
+    } else {
+        servicesList.style.display = "none";
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
