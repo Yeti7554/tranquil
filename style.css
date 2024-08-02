@@ -356,8 +356,39 @@ footer a.logo-content {
     display: flex;
 }
 
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+}
+
 .about-columns p {
-    margin: 5vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+    font-size: large;
+}
+
+.about-photo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-photo-container p {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.about-columns ul {
+    font-family: 'Imprima', sans-serif;
+    margin-right: 7.55vw;
+    margin-left: 7.5vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
 }
 
 .about-image {
@@ -376,6 +407,10 @@ footer a.logo-content {
     font-family: 'Kalam', cursive;
     left: 10px; /* Position from the left of the parent */
     text-align: left;
+}
+
+.about-caption p {
+    margin-right: 4px;
 }
 
 h2 {
