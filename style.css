@@ -496,21 +496,21 @@ form div {
     }
     
     .main-banner p, .main-banner strong {
-        font-size: 30px; /* Larger font size for better readability */
+        font-size: 20px; /* Larger font size for better readability */
         color: white; /* Ensures text color is white for visibility */
     }
 
     /* Increase the hamburger menu size for easier interaction */
     .hamburger {
         display: block; /* Ensures the hamburger is visible on small screens */
-        font-size: 80px; /* Larger icon size */
+        font-size: 50px; /* Larger icon size */
         padding: 10px; /* Larger clickable area */
         color: black; /* Set a visible color for the hamburger icon */
     }
 
     /* Adjust footer font sizes for better visibility on mobile */
     footer a, footer p, footer h5, footer .white-font{
-        font-size: 25px; /* Larger text for readability */
+        font-size: 18px; /* Larger text for readability */
         color: white; /* Maintain white text in the footer for contrast */
     }
 
@@ -550,12 +550,16 @@ form div {
         border-bottom: 1px solid gray; /* Optional separator */
         color: black; /* Ensure text color is visible */
         display: block; /* Ensure links are block level */
-        font-size: 40px;
+        font-size: 25px;
+    }
+
+    .about-overlay {
+        font-size: 25px;
     }
 
     /* Image responsiveness adjustments */
     .logo-png, .logo-black, .about-image {
-        width: 50vw; /* Responsive width for logos and images */
+        width: 35vw; /* Responsive width for logos and images */
         height: auto; /* Maintain aspect ratio */
     }
 
@@ -590,7 +594,7 @@ form div {
     .dark-button, .light-button {
         width: 40vw;
         height: 6vw;
-        font-size: 28px;
+        font-size: 15px;
         margin-bottom: 40px;
     }
 
@@ -599,7 +603,7 @@ form div {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: 92vw;
         margin: 0
     }
 
@@ -608,7 +612,7 @@ form div {
     }
 
     .logo-black {
-        width: 35vw;
+        width: 25vw;
     }
 
     .modality {
