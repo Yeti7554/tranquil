@@ -409,8 +409,18 @@ footer a.logo-content {
     text-align: left;
 }
 
-.about-caption p {
-    margin-right: 4px;
+.cpca-logo {
+    width: 10vw;
+    height: auto;
+    margin-left: 10vw;
+}
+
+@media (max-width: 1000px) {
+    .cpca-logo {
+        width: 15vw;
+        height: auto;
+        margin-left: 15vw;
+    }
 }
 
 h2 {
@@ -752,7 +762,7 @@ h3, p {
 }
 
 /* Mobile: Scrollable overflow */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .office-images {
         display: flex;
         justify-content: flex-start; /* Align items to start for better scrolling */
