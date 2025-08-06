@@ -794,7 +794,7 @@ h3, p {
     align-items: center;
     background-color: black; /* blue-green */
     padding: 5px;
-    height: 15vh;
+    min-height: 12vh;
 }
 
 .insurance-logos-link {
@@ -804,8 +804,10 @@ h3, p {
 }
 
 .insurance-logos-container img {
-    width: auto;
-    height: 5vh;
+    width: 120px;
+    height: auto;
+    max-height: 10vh;
+    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -825,7 +827,8 @@ h3, p {
     }
 
     .insurance-logos-container img {
-        height: 4vh; /* Shrink logos further on smaller screens */
+        width: 100px; /* Smaller width for mobile */
+        height: auto;
         margin: 5px 0;
     }
 
@@ -837,7 +840,8 @@ h3, p {
 
 @media (max-width: 480px) {
     .insurance-logos-container img {
-        height: 3vh; /* Shrink logos more on extra-small screens */
+        width: 80px; /* Even smaller width for extra-small screens */
+        height: auto;
     }
 
     .insurance-link {
