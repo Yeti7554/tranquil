@@ -1155,3 +1155,46 @@ footer { padding: 34px 24px 22px; box-sizing: border-box; background: #087289; }
     footer { padding: 28px 20px 22px; }
     .footer-content { gap: 16px; }
 }
+
+/* About page refinement: the familiar image-and-story layout, with softer structure. */
+.about-content { background: #f7faf8; padding: 50px max(24px, calc((100% - 1120px) / 2)) 64px; box-sizing: border-box; }
+.about-content > .about-overlay { position: static; display: block; margin: 0 0 24px; padding: 0; color: #087289; font-size: 46px; line-height: 1; }
+.about-content > .about-columns { max-width: 1120px; margin: 0 auto; align-items: flex-start; gap: 42px; }
+.about-content > .about-columns > .about-photo-container { flex: 0 0 min(38%, 370px); align-items: center; }
+.about-content .about-image { width: 100%; height: auto; max-height: none; margin: 0; border-radius: 14px; box-shadow: 0 12px 25px rgba(24, 59, 66, .16); }
+.about-content .about-caption { width: 100%; text-align: center; }
+.about-content .cpca-logo { width: min(150px, 48%); margin: 20px auto 0; }
+.about-content .about-text-container { flex: 1; box-sizing: border-box; padding: 35px; background: white; border-radius: 14px; box-shadow: 0 8px 22px rgba(24, 59, 66, .09); }
+.about-content .about-text-container > p { margin: 0; font-size: 17px; line-height: 1.7; }
+.about-content .about-text-container > p + p { margin-top: 26px; }
+.about-content .about-text-container > p strong { color: #087289; }
+.about-content .about-text-container > .about-columns { gap: 16px; margin: 28px 0; }
+.about-content .about-text-container > .about-columns ul { flex: 1; box-sizing: border-box; margin: 0; padding: 20px 20px 20px 38px; background: #edf6f3; border-left: 4px solid #087289; border-radius: 6px; line-height: 1.55; }
+.about-content .about-text-container > .about-columns ul strong { color: #087289; }
+.about-content .office-images { max-width: 1120px; margin: 42px auto 0; padding: 18px; gap: 18px; border-radius: 14px; box-sizing: border-box; }
+.about-content .office-images img { width: calc(25% - 14px); height: 190px; object-fit: cover; border-radius: 9px; }
+
+footer .dark-button, .home-page footer .dark-button {
+    background: white;
+    color: #087289;
+    border: 2px solid white;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, .2);
+}
+
+footer .dark-button:hover, .home-page footer .dark-button:hover {
+    background: #dceeea;
+    border-color: #dceeea;
+    color: #183b42;
+}
+
+@media (max-width: 700px) {
+    .about-content { padding: 30px 16px 45px; }
+    .about-content > .about-overlay { margin: 0 8px 18px; font-size: 38px; }
+    .about-content > .about-columns { gap: 24px; }
+    .about-content .about-text-container { padding: 25px 20px; border-radius: 10px; }
+    .about-content .about-text-container > p { font-size: 16px; }
+    .about-content .about-text-container > .about-columns { gap: 12px; margin: 22px 0; }
+    .about-content .about-text-container > .about-columns ul { width: 100%; padding: 18px 18px 18px 34px; }
+    .about-content .office-images { margin-top: 28px; padding: 14px; }
+    .about-content .office-images img { flex: 0 0 180px; width: 180px; height: 180px; }
+}
