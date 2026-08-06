@@ -92,10 +92,10 @@
         </div>
 
         <div class="office-images">
-            <img src="../images/office1.jpg" alt="Office Image 1">
-            <img src="../images/office2.jpg" alt="Office Image 2">
-            <img src="../images/office3.jpg" alt="Waiting Area 1">
-            <img src="../images/office4.jpg" alt="Office Area 2">
+            <button type="button" class="about-gallery-trigger"><img src="../images/office1.jpg" alt="Office Image 1"></button>
+            <button type="button" class="about-gallery-trigger"><img src="../images/office2.jpg" alt="Office Image 2"></button>
+            <button type="button" class="about-gallery-trigger"><img src="../images/office3.jpg" alt="Waiting Area 1"></button>
+            <button type="button" class="about-gallery-trigger"><img src="../images/office4.jpg" alt="Office Area 2"></button>
         </div>        
 
         <div>
@@ -103,6 +103,14 @@
 
             </p>
         </div>
+    </div>
+
+    <div class="about-lightbox" id="aboutLightbox" role="dialog" aria-modal="true" aria-label="Office photo gallery" aria-hidden="true">
+        <button type="button" class="lightbox-close" aria-label="Close gallery">×</button>
+        <button type="button" class="lightbox-arrow lightbox-previous" aria-label="Previous photo">‹</button>
+        <img src="" alt="" class="lightbox-image">
+        <button type="button" class="lightbox-arrow lightbox-next" aria-label="Next photo">›</button>
+        <p class="lightbox-caption"></p>
     </div>
  
     <footer>
