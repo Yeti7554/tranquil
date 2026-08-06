@@ -1040,3 +1040,118 @@ h3, p {
         font-size: 35px;
     }
 }
+
+/* Mobile-only refinements. Desktop styles remain unchanged. */
+@media (max-width: 700px) {
+    html, body { max-width: 100%; overflow-x: hidden; }
+    nav { min-height: 64px; box-sizing: border-box; padding: 8px 16px; }
+    .logo-png { width: 150px; height: auto; }
+    .hamburger { top: 7px; right: 7px; padding: 8px 12px; font-size: 38px; line-height: 1; }
+    .nav-links { margin-top: 64px; height: calc(100vh - 64px); overflow-y: auto; }
+    .nav-link { font-size: 22px; padding: 17px 20px; box-sizing: border-box; }
+
+    .main-banner { height: auto; min-height: 390px; padding: 34px 22px; }
+    .main-banner p, .main-banner strong { font-size: 18px; }
+    .home-page .main-banner { height: auto; min-height: 390px; }
+    .home-page .banner { padding-left: 12px; padding-right: 12px; }
+    .home-page .text-panel { padding: 30px 22px; }
+    .home-page .text-panel p { font-size: 17px; line-height: 1.65; }
+
+    h2 { font-size: 34px; line-height: 1.15; }
+    .specialties { margin: 42px 0 55px; }
+    .card-holder { width: calc(100% - 32px); gap: 20px; }
+    .card-image { width: 100%; height: auto; max-height: none; }
+    .card h4 { width: min(100%, 310px); box-sizing: border-box; }
+    .home-page .card h4 { width: 100%; }
+
+    .toggles { width: calc(100% - 32px); margin: 0 auto 48px; }
+    .home-page .toggles { width: calc(100% - 32px); }
+    .modality { width: 100%; max-width: 100%; padding-left: 0; }
+    .home-page .modality { padding: 18px; }
+    .toggles h6, h6 { font-size: 20px; }
+    .toggles ol { padding-left: 25px; }
+    .toggles li { font-size: 17px; }
+    .toggles .button-set, .fees-container .button-set { flex-direction: column; align-items: stretch; gap: 10px; }
+    .toggles .button-set a, .fees-container .button-set a { display: block; }
+    .dark-button, .light-button { width: 100%; max-width: 360px; height: auto; min-height: 46px; margin: 10px auto; font-size: 16px; }
+
+    .insurance-logos { padding: 18px; }
+    .insurance-logos-container { gap: 10px; }
+    .insurance-logos-container img { width: min(150px, 54vw); max-height: none; }
+    .insurance-logos-link { justify-content: center; text-align: center; }
+    .insurance-link { font-size: 13px; }
+
+    .about-content { padding-top: 18px; }
+    .about-overlay { position: static; display: block; margin: 0 24px 12px; padding: 0; font-size: 32px; }
+    .about-columns { flex-direction: column; }
+    .about-image { display: block; width: min(84vw, 360px); height: auto; margin: 0 auto 18px; }
+    .cpca-logo { display: block; width: min(34vw, 130px); margin: 0 auto 22px; }
+    .about-columns p { margin: 0 24px 18px; font-size: 17px; line-height: 1.65; }
+    .about-columns ul { margin: 10px 35px 22px; padding-left: 22px; }
+    .office-images { gap: 12px; padding: 16px; }
+    .office-images img { flex: 0 0 180px; width: 180px; height: 180px; }
+
+    .medium-banner-container { padding: 18px 16px 0; }
+    .banner-medium { width: 100%; margin-bottom: 28px; }
+    .fees-container { padding: 18px 24px 40px; }
+    .fees-container p, .fees-container li { font-size: 17px; line-height: 1.6; }
+    iframe { width: 100%; max-width: 100%; box-sizing: border-box; margin-bottom: 28px; }
+    .medium-banner-container iframe { height: 330px; }
+    form { width: 100%; margin-bottom: 42px; }
+    form > div { width: calc(100% - 40px); padding: 0; }
+    label { font-size: 20px; }
+    input, .text-area, input[type="text"], input[type="email"], textarea { width: 100%; box-sizing: border-box; font-size: 16px; }
+    textarea.text-area { min-height: 140px; }
+    form .submit { width: auto; }
+
+    .tackles-hero, .article-hero { padding: 42px 20px 38px; }
+    .tackles-grid { padding: 36px 16px 56px; }
+    .article-content { width: calc(100% - 32px); font-size: 17px; line-height: 1.65; }
+    .article-content h2 { font-size: 29px; }
+    .article-feature-image { height: 60vw; }
+    .cycle-section { margin-left: -16px; margin-right: -16px; }
+    .next-step { margin-left: -16px; margin-right: -16px; }
+
+    footer { padding: 28px 20px 22px; box-sizing: border-box; }
+    .footer-content { flex-direction: column; align-items: center; gap: 16px; }
+    .footer-contact { margin: 0; align-items: center; text-align: center; gap: 5px; }
+    .logo-black { width: 150px; }
+    .footer-button-section .dark-button { width: min(100%, 330px); }
+    footer a, footer p, footer h5, footer .white-font { font-size: 16px; }
+}
+
+/* Shared controls and footer treatment across every page. */
+.dark-button, .light-button {
+    width: auto;
+    min-width: 190px;
+    min-height: 46px;
+    margin: 12px 2px;
+    padding: 12px 26px;
+    border-radius: 24px;
+    font-family: 'Imprima', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.dark-button {
+    background: #087289;
+    color: white;
+    box-shadow: 0 4px 10px rgba(24, 59, 66, .16);
+}
+
+.dark-button:hover { background: #2D5B65; transform: translateY(-1px); }
+.light-button { background: #dceeea; color: #183b42; }
+.light-button:hover { background: #c6e2dc; transform: translateY(-1px); }
+
+footer { padding: 34px 24px 22px; box-sizing: border-box; background: #087289; }
+.footer-content { max-width: 940px; margin: 0 auto; align-items: center; gap: 26px; }
+.footer-contact { gap: 5px; }
+.footer-button-section { max-width: 940px; margin: 0 auto; }
+.footer-button-section .dark-button { min-width: 220px; }
+
+@media (max-width: 700px) {
+    .dark-button, .light-button { width: 100%; max-width: 360px; margin: 8px auto; }
+    footer { padding: 28px 20px 22px; }
+    .footer-content { gap: 16px; }
+}
