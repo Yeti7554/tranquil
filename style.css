@@ -505,6 +505,8 @@ h2 {
     font-family: 'Kalam', cursive;
 }
 
+.tackles-hero h1 { word-spacing: -0.28em; }
+
 .tackles-hero > p:last-child, .article-intro {
     font-size: 20px;
     line-height: 1.55;
