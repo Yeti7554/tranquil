@@ -563,6 +563,7 @@ h2 {
 .cycle-card { background: white; border-top: 5px solid #2D5B65; padding: 20px; box-shadow: 0 3px 10px rgba(24, 59, 66, .08); }
 .cycle-card > span { font-size: 28px; }
 .cycle-card p { font-size: 16px; line-height: 1.55; margin: 9px 0; }
+.cycle-card .cycle-descriptor { margin-top: -3px; color: #537177; font-style: italic; }
 .cycle-card.trigger { border-color: #FF4D4D; }.cycle-card.escape { border-color: #FFB800; }.cycle-card.relief { border-color: #00A957; }.cycle-card.panic { border-color: #8A2BE2; }
 .circuit-breaker { background: #2D5B65; color: white; padding: 20px 22px; margin: 28px 0 0; }
 .drivers { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 28px; margin: 25px 0; }
@@ -570,7 +571,10 @@ h2 {
 .myth-table { border-top: 1px solid #b8cdca; }
 .myth-table > div { padding: 18px; border-bottom: 1px solid #b8cdca; display: grid; grid-template-columns: minmax(190px, .65fr) 2fr; gap: 20px; }
 .myth-table p { margin: 0; }
+.myth-table > .myth-table-header { background: #2D5B65; color: white; font-size: 17px; }
 .help-list strong { color: #087289; }
+.article-next-step { margin-top: 58px; }
+.article-next-step h2 { margin-top: 0; }
 .next-step { background: #2D5B65; color: white; padding: 36px; margin-top: 58px; text-align: center; }
 .next-step h2 { color: white; text-align: center; margin-top: 0; }
 .next-step p { color: white; }
