@@ -3,10 +3,12 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/pages/tranquil-tackles", "destination": "/blog", "permanent": true },
-    { "source": "/pages/procrastination", "destination": "/blog/procrastination", "permanent": true }
+    { "source": "/pages/procrastination", "destination": "/blog/procrastination", "permanent": true },
+    { "source": "/pages/executive-dysfunction", "destination": "/blog/executive-dysfunction", "permanent": true }
   ],
   "rewrites": [
     { "source": "/blog", "destination": "/pages/tranquil-tackles" },
-    { "source": "/blog/procrastination", "destination": "/pages/procrastination" }
+    { "source": "/blog/procrastination", "destination": "/pages/procrastination" },
+    { "source": "/blog/executive-dysfunction", "destination": "/pages/executive-dysfunction" }
   ]
 }

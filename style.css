@@ -517,20 +517,25 @@ h2 {
 
 .tackles-grid {
     min-height: 430px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 330px));
     justify-content: center;
+    align-items: stretch;
+    gap: 36px;
     padding: 70px 24px 95px;
     background: #f7faf8;
 }
 
 .tackles-card {
-    width: min(100%, 330px);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background: white;
     padding: 16px 16px 25px;
     box-shadow: 0 8px 24px rgba(25, 67, 76, 0.16);
     border-radius: 4px;
-    align-self: flex-start;
 }
 
 .tackles-card-image-link { display: block; }
@@ -543,8 +548,10 @@ h2 {
 
 .tackles-card h2 { font-size: 29px; line-height: 1.1; margin: 23px 0 10px; word-spacing: -0.28em; }
 .tackles-card h2 a { color: #087289; text-decoration: none; }
+.tackles-card h2 span { font-size: .68em; word-spacing: normal; }
 .tackles-card p { line-height: 1.45; margin: 0 10px 19px; }
 .article-link { color: #087289; font-weight: bold; text-decoration: none; }
+.tackles-card .article-link { margin-top: auto; }
 .article-link:hover, .tackles-card h2 a:hover { text-decoration: underline; }
 
 .article-hero h1 span { font-size: .68em; }
@@ -582,6 +589,32 @@ h2 {
 .consultation-button:hover { background: #d6ecdf; }
 .article-signoff { margin: 30px 0 0; font-family: 'Imprima', sans-serif; font-size: 16px; text-align: right; }
 .article-signoff p { margin: 0; }
+
+/* Executive dysfunction article */
+.article-table { border: 1px solid #b8cdca; margin: 26px 0; }
+.article-table-row { display: grid; grid-template-columns: minmax(190px, .8fr) 1.5fr; gap: 20px; padding: 13px 18px; border-bottom: 1px solid #d4e1df; }
+.article-table-row:last-child { border-bottom: 0; }
+.article-table .article-table-header { background: #2D5B65; color: white; border-bottom: 0; }
+.article-callout { margin: 28px 0; padding: 20px 22px; background: #eef6f4; border-left: 5px solid #087289; }
+.gap-flow, .burnout-spiral, .strategy-list, .start-list { list-style: none; padding: 0; margin: 24px 0; }
+.gap-flow { width: min(100%, 610px); margin-left: auto; margin-right: auto; }
+.gap-flow li { position: relative; padding: 15px 20px; margin: 0; background: white; border-left: 4px solid #087289; box-shadow: 0 3px 9px rgba(24, 59, 66, .08); }
+.gap-flow li + li { margin-top: 14px; }
+.gap-flow li + li::before { content: "↓"; position: absolute; top: -20px; left: 17px; color: #087289; font-size: 21px; }
+.gap-flow li strong { display: inline-block; min-width: 165px; color: #087289; text-transform: uppercase; }
+.cycle-repeat { margin: -12px auto 24px; width: min(100%, 610px); color: #537177; font-style: italic; }
+.burnout-spiral { counter-reset: burnout; display: grid; gap: 10px; }
+.burnout-spiral li { counter-increment: burnout; padding: 14px 18px 14px 52px; margin: 0; position: relative; background: #eef6f4; }
+.burnout-spiral li::before { content: counter(burnout); position: absolute; left: 15px; top: 14px; width: 25px; height: 25px; border-radius: 50%; color: white; background: #087289; text-align: center; line-height: 25px; font-size: 14px; }
+.thought-list { padding: 18px 22px; background: #f7faf8; border-left: 4px solid #b8cdca; line-height: 1.8; font-style: italic; }
+.perfectionism-flow { padding: 18px; text-align: center; color: #087289; background: #eef6f4; font-weight: bold; line-height: 1.65; }
+.strategy-list { counter-reset: strategy; display: grid; gap: 16px; }
+.strategy-list li { counter-increment: strategy; padding: 21px 22px 21px 70px; margin: 0; position: relative; background: #f7faf8; border-radius: 6px; }
+.strategy-list li::before { content: counter(strategy, decimal-leading-zero); position: absolute; top: 21px; left: 18px; color: #087289; font-weight: bold; font-size: 17px; }
+.strategy-list strong { display: block; color: #087289; margin-bottom: 5px; }
+.start-list { counter-reset: start; width: 100%; max-width: none; box-sizing: border-box; margin: 24px 0; text-align: left; }
+.start-list li { counter-increment: start; padding: 10px 10px 10px 48px; margin: 0; position: relative; border-bottom: 1px solid #d4e1df; }
+.start-list li::before { content: counter(start); position: absolute; left: 8px; top: 8px; width: 26px; height: 26px; line-height: 26px; text-align: center; background: #087289; color: white; border-radius: 50%; font-size: 14px; }
 
 .medium-banner-container {
     display: flex;
@@ -831,7 +864,7 @@ form div {
 
     .tackles-hero, .article-hero { padding: 54px 20px 45px; }
     .tackles-hero > p:last-child, .article-intro { font-size: 18px; }
-    .tackles-grid { padding: 45px 20px 70px; }
+    .tackles-grid { grid-template-columns: minmax(0, 330px); gap: 28px; padding: 45px 20px 70px; }
     .article-feature-image { width: 100%; height: 57vw; margin-top: 0; }
     .article-content { width: min(100% - 32px, 850px); font-size: 17px; padding-top: 25px; }
     .article-content h2 { font-size: 30px; }
@@ -840,6 +873,9 @@ form div {
     .myth-table > div { display: block; }
     .myth-table p { margin-top: 8px; }
     .next-step { margin-left: -16px; margin-right: -16px; padding: 30px 20px; }
+    .article-table-row { grid-template-columns: 1fr; gap: 5px; padding: 13px 15px; }
+    .gap-flow li strong { display: block; min-width: 0; margin-bottom: 4px; }
+    .strategy-list li { padding-left: 62px; }
 }
     
 embed {
@@ -1111,7 +1147,7 @@ h3, p {
     form .submit { width: auto; }
 
     .tackles-hero, .article-hero { padding: 42px 20px 38px; }
-    .tackles-grid { padding: 36px 16px 56px; }
+    .tackles-grid { grid-template-columns: minmax(0, 330px); gap: 24px; padding: 36px 16px 56px; }
     .article-content { width: calc(100% - 32px); font-size: 17px; line-height: 1.65; }
     .article-content h2 { font-size: 29px; }
     .article-feature-image { height: 60vw; }
