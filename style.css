@@ -553,6 +553,7 @@ h2 {
 .article-link { color: #087289; font-weight: bold; text-decoration: none; }
 .tackles-card .article-link { margin-top: auto; }
 .article-link:hover, .tackles-card h2 a:hover { text-decoration: underline; }
+.tackles-card:nth-child(3):last-child { grid-column: 1 / -1; justify-self: center; }
 
 .article-hero h1 span { font-size: .68em; }
 .article-hero { padding-bottom: 48px; }
@@ -615,6 +616,41 @@ h2 {
 .start-list { counter-reset: start; width: 100%; max-width: none; box-sizing: border-box; margin: 24px 0; text-align: left; }
 .start-list li { counter-increment: start; padding: 10px 10px 10px 48px; margin: 0; position: relative; border-bottom: 1px solid #d4e1df; }
 .start-list li::before { content: counter(start); position: absolute; left: 8px; top: 8px; width: 26px; height: 26px; line-height: 26px; text-align: center; background: #087289; color: white; border-radius: 50%; font-size: 14px; }
+
+/* Burnout article */
+.article-quote { margin: 0 0 32px; padding: 24px 28px; color: #2D5B65; background: #f5efe9; border-left: 5px solid #c77c8a; font-family: 'Kalam', cursive; font-size: 23px; line-height: 1.45; }
+.internal-state { margin: 32px 0; padding: 24px; background: #2D5B65; color: white; text-align: center; border-radius: 4px; }
+.internal-state h2 { margin: 0 0 18px; color: white; text-align: center; font-size: 29px; text-transform: uppercase; }
+.internal-state > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; }
+.internal-state p { margin: 0; color: white; }
+.burnout-pillars { display: grid; grid-template-columns: repeat(3, 1fr); margin: 22px 0 42px; border: 1px solid #b8cdca; }
+.burnout-pillars section { padding: 24px; border-right: 1px solid #b8cdca; }
+.burnout-pillars section:last-child { border-right: 0; }
+.burnout-pillars h4 { margin: 0 0 13px; color: #087289; font-family: 'Kalam', cursive; font-size: 21px; line-height: 1.25; }
+.burnout-pillars p { margin: 0; font-size: 16px; line-height: 1.55; }
+.article-inline-image { display: block; width: min(100%, 920px); height: auto; margin: 34px auto 42px; border-radius: 7px; box-shadow: 0 8px 22px rgba(24, 59, 66, .14); }
+.checkin-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 26px 0; }
+.checkin-grid section { padding: 22px; background: #f7faf8; border: 1px solid #d5e4e1; border-radius: 6px; }
+.checkin-grid h3 { margin: 0 0 12px; color: #087289; text-align: left; font-size: 22px; }
+.checkin-grid label { display: flex; align-items: flex-start; gap: 9px; width: auto; margin: 11px 0; color: #183b42; font-family: 'Imprima', sans-serif; font-size: 16px; line-height: 1.45; cursor: pointer; }
+.checkin-grid input { flex: 0 0 auto; width: 17px; height: 17px; margin: 2px 0 0; accent-color: #087289; }
+.reflect-box { margin: 32px 0; padding: 24px; background: #eef6f4; border-left: 5px solid #087289; }
+.reflect-box h3 { margin: 0 0 12px; color: #087289; text-align: left; font-size: 23px; }
+.reflect-box p { margin: 10px 0; }
+.expectation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 20px; margin: 24px 0; }
+.expectation-grid p { margin: 0; padding: 16px 18px; border-bottom: 1px solid #d4e1df; }
+.expectation-grid p:nth-child(odd) { color: #9c3e4d; background: #fff6f4; }
+.expectation-grid p:nth-child(even) { color: #246b51; background: #f2faf5; }
+
+@media (max-width: 700px) {
+    .article-quote { padding: 20px; font-size: 20px; }
+    .internal-state { padding: 20px 14px; }
+    .internal-state h2 { font-size: 26px; }
+    .burnout-pillars, .checkin-grid, .expectation-grid { grid-template-columns: 1fr; }
+    .burnout-pillars section { border-right: 0; border-bottom: 1px solid #b8cdca; }
+    .burnout-pillars section:last-child { border-bottom: 0; }
+    .article-inline-image { margin: 26px auto 34px; }
+}
 
 .medium-banner-container {
     display: flex;
@@ -865,6 +901,7 @@ form div {
     .tackles-hero, .article-hero { padding: 54px 20px 45px; }
     .tackles-hero > p:last-child, .article-intro { font-size: 18px; }
     .tackles-grid { grid-template-columns: minmax(0, 330px); gap: 28px; padding: 45px 20px 70px; }
+    .tackles-card:nth-child(3):last-child { grid-column: auto; }
     .article-feature-image { width: 100%; height: 57vw; margin-top: 0; }
     .article-content { width: min(100% - 32px, 850px); font-size: 17px; padding-top: 25px; }
     .article-content h2 { font-size: 30px; }
