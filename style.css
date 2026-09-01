@@ -563,6 +563,9 @@ h2 {
 .article-byline { color: #d6ecdf; margin-top: 26px; font-size: 16px; }
 .article-byline span { margin: 0 8px; }
 .article-feature-image { width: min(900px, calc(100% - 40px)); height: min(48vw, 430px); max-height: 430px; display: block; object-fit: cover; margin: 48px auto 0; }
+.photo-credit { width: min(900px, calc(100% - 40px)); margin: 9px auto 0; color: #537177; font-size: 14px; font-style: italic; }
+.photo-credit a { color: #087289; font-weight: bold; text-decoration: none; border-bottom: 1px solid currentColor; }
+.photo-credit a:hover { color: #2D5B65; }
 .article-content { width: min(850px, calc(100% - 40px)); margin: 0 auto; padding: 35px 0 84px; color: #183b42; font-size: 18px; line-height: 1.7; }
 .article-content h2 { color: #087289; text-align: left; font-size: 36px; line-height: 1.15; margin: 56px 0 16px; }
 .article-content h3 { font-family: 'Kalam', cursive; margin: 8px 0 10px; font-size: 23px; }
@@ -905,6 +908,7 @@ form div {
     .tackles-hero > p:last-child, .article-intro { font-size: 18px; }
     .tackles-grid { grid-template-columns: repeat(2, minmax(0, 330px)); gap: 28px; padding: 45px 20px 70px; }
     .article-feature-image { width: 100%; height: 57vw; margin-top: 0; }
+    .photo-credit { width: calc(100% - 32px); margin-top: 8px; }
     .article-content { width: min(100% - 32px, 850px); font-size: 17px; padding-top: 25px; }
     .article-content h2 { font-size: 30px; }
     .cycle-section { padding: 24px 18px; margin: 38px -16px; }
