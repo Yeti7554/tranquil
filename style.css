@@ -518,7 +518,7 @@ h2 {
 .tackles-grid {
     min-height: 430px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 330px));
+    grid-template-columns: repeat(3, minmax(0, 330px));
     justify-content: center;
     align-items: stretch;
     gap: 36px;
@@ -553,7 +553,10 @@ h2 {
 .article-link { color: #087289; font-weight: bold; text-decoration: none; }
 .tackles-card .article-link { margin-top: auto; }
 .article-link:hover, .tackles-card h2 a:hover { text-decoration: underline; }
-.tackles-card:nth-child(3):last-child { grid-column: 1 / -1; justify-self: center; }
+
+@media (max-width: 1120px) {
+    .tackles-grid { grid-template-columns: repeat(2, minmax(0, 330px)); }
+}
 
 .article-hero h1 span { font-size: .68em; }
 .article-hero { padding-bottom: 48px; }
@@ -900,8 +903,7 @@ form div {
 
     .tackles-hero, .article-hero { padding: 54px 20px 45px; }
     .tackles-hero > p:last-child, .article-intro { font-size: 18px; }
-    .tackles-grid { grid-template-columns: minmax(0, 330px); gap: 28px; padding: 45px 20px 70px; }
-    .tackles-card:nth-child(3):last-child { grid-column: auto; }
+    .tackles-grid { grid-template-columns: repeat(2, minmax(0, 330px)); gap: 28px; padding: 45px 20px 70px; }
     .article-feature-image { width: 100%; height: 57vw; margin-top: 0; }
     .article-content { width: min(100% - 32px, 850px); font-size: 17px; padding-top: 25px; }
     .article-content h2 { font-size: 30px; }
