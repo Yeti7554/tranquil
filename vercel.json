@@ -5,12 +5,14 @@
     { "source": "/pages/tranquil-tackles", "destination": "/blog", "permanent": true },
     { "source": "/pages/procrastination", "destination": "/blog/procrastination", "permanent": true },
     { "source": "/pages/executive-dysfunction", "destination": "/blog/executive-dysfunction", "permanent": true },
-    { "source": "/pages/burnout", "destination": "/blog/burnout", "permanent": true }
+    { "source": "/pages/burnout", "destination": "/blog/burnout", "permanent": true },
+    { "source": "/pages/the-strong-one", "destination": "/blog/the-strong-one", "permanent": true }
   ],
   "rewrites": [
     { "source": "/blog", "destination": "/pages/tranquil-tackles" },
     { "source": "/blog/procrastination", "destination": "/pages/procrastination" },
     { "source": "/blog/executive-dysfunction", "destination": "/pages/executive-dysfunction" },
-    { "source": "/blog/burnout", "destination": "/pages/burnout" }
+    { "source": "/blog/burnout", "destination": "/pages/burnout" },
+    { "source": "/blog/the-strong-one", "destination": "/pages/the-strong-one" }
   ]
 }
