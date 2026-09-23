@@ -649,12 +649,13 @@ h2 {
 .expectation-grid p:nth-child(even) { color: #246b51; background: #f2faf5; }
 
 /* The Strong One article */
-.choice-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 28px 0; }
+.choice-grid { display: grid; gap: 12px; width: min(100%, 580px); margin: 28px auto; }
 .choice-grid section { padding: 23px 20px; border: 1px solid #b8cdca; background: #f7faf8; text-align: center; }
 .choice-grid section:last-child { background: #fff6f4; border-color: #dfb5bc; }
 .choice-grid h3 { margin: 0 0 8px; color: #087289; font-size: 25px; }
 .choice-grid section:last-child h3 { color: #9c3e4d; }
 .choice-grid p { margin: 0; font-size: 16px; line-height: 1.5; }
+.choice-vs { margin: 0; text-align: center; color: #537177; font-family: 'Kalam', cursive; font-size: 19px; }
 .voice-list { list-style: none; padding: 0; margin: 22px 0; }
 .voice-list li { margin: 0; padding: 10px 15px; border-bottom: 1px solid #d4e1df; }
 .water-glass { margin: 28px 0; padding: 27px 28px; color: white; background: #2D5B65; border-radius: 4px; }
@@ -678,12 +679,26 @@ h2 {
 .learning-grid section:last-child h3 { color: #246b51; }
 .learning-grid ul { margin: 0; padding-left: 20px; }
 .learning-grid li { margin-bottom: 8px; }
+.support-comparison { border: 1px solid #b8cdca; margin: 26px 0; }
+.support-comparison-row { display: grid; grid-template-columns: repeat(2, 1fr); }
+.support-comparison-row > * { padding: 14px 18px; border-right: 1px solid #d4e1df; border-bottom: 1px solid #d4e1df; }
+.support-comparison-row > *:last-child { border-right: 0; }
+.support-comparison-row:last-child > * { border-bottom: 0; }
+.support-comparison-head > * { color: #087289; background: #eef6f4; text-align: center; font-family: 'Kalam', cursive; font-size: 21px; }
+.support-comparison-row:not(.support-comparison-head) > *:first-child { background: #fff6f4; }
+.support-comparison-row:not(.support-comparison-head) > *:last-child { background: #f2faf5; }
+.belief-list { margin: 28px 0; padding: 20px 25px 20px 48px; background: #f7faf8; }
+.belief-list li { margin: 8px 0; padding-left: 5px; }
+.remember-note { margin: 28px auto; max-width: 720px; padding: 20px 24px; background: #eef6f4; border-left: 5px solid #087289; }
 
 @media (max-width: 700px) {
     .article-quote { padding: 20px; font-size: 20px; }
     .internal-state { padding: 20px 14px; }
     .internal-state h2 { font-size: 26px; }
-    .burnout-pillars, .checkin-grid, .expectation-grid, .choice-grid, .independence-grid, .learning-grid { grid-template-columns: 1fr; }
+    .burnout-pillars, .checkin-grid, .expectation-grid, .independence-grid, .learning-grid { grid-template-columns: 1fr; }
+    .support-comparison-row { grid-template-columns: 1fr; }
+    .support-comparison-row > * { border-right: 0; }
+    .support-comparison-row > *:first-child { border-bottom: 1px solid #d4e1df; }
     .burnout-pillars section { border-right: 0; border-bottom: 1px solid #b8cdca; }
     .burnout-pillars section:last-child { border-bottom: 0; }
     .article-inline-image { margin: 26px auto 34px; }
